@@ -1,0 +1,10 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua")))()
+local Window =Library.CreateLib("Vratinum V2",LightTheme")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("WalkSpeed Changer")
+
+
+Section:NewButton("Infinite Jump","ButtonInfo",function()
+    local InfiniteJumpEnabled = true
