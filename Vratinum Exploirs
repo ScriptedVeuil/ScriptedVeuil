@@ -1,0 +1,38 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua")))()
+local Window =Library.CreateLib("Vratinum V2",LightTheme")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Jump Power")
+
+
+MainSection:NewButton("Infinite Jump","Basically InfiniteJump is Enabled",function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+    end)
+
+Main:NewSection("Flips")
+
+
+MainSection:NewButton("Back n Front Flips","Basically Flips the character",function()
+loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+end)
+
+MainSection:NewButton("Inf Yield", "Admin Cmds", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  end)
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "Changes your speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Changes your speed", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+  PlayerSection:NewSlider("Max Health", "Changes your Hp", 999999, 100, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.MaxHealth = s
+end)
